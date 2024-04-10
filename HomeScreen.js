@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { View, Text, Button, FlatList } from 'react-native';
-import { gadgets } from '../db.json'; // Assuming your JSON data is stored in db.json
+import { gadgets } from '../db.json'; 
 
 export default function HomeScreen({ navigation }) {
   return (
