@@ -1,16 +1,16 @@
+// screens/GadgetDetailScreen.js
+
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const GadgetDetailScreen = ({ route }) => {
-  const { name, brand, price } = route.params.gadget;
-
+export default function GadgetDetailScreen({ route }) {
+  const { gadget } = route.params;
+  
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Name: {name}</Text>
-      <Text>Brand: {brand}</Text>
-      <Text>Price: ${price}</Text>
+      <Text>{gadget.name}</Text>
+      <Text>{gadget.brand}</Text>
+      <Text>${gadget.price}</Text>
     </View>
   );
-};
-
-export default GadgetDetailScreen;
+}
